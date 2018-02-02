@@ -1,0 +1,34 @@
+# MySQL Docker Container Information
+Note: You need to create a directory called db_data to have persistent data storage.
+```bash
+mkdir db_data
+```
+
+Start the container
+```bash
+docker-compose up
+# or to run it as a daemon
+docker-compose up -d
+```
+
+Stop running the container.
+```bash
+docker-compose down
+```
+
+Enter a running container.
+```bash
+docker exec -it <container-name> /bin/bash
+```
+
+## Some useful commands to know
+Run a command on an image.
+```bash
+docker run -it <image name> <command>
+# Note the above command will leave a hanging container.
+```
+
+Run command on an existing and running container.
+```bash
+docker exec -it <container-name> <command>
+```
