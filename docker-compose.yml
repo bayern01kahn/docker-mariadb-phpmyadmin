@@ -14,9 +14,9 @@ phpmyadmin:
 mysql:
     image: 'mariadb'
     ports:
-        - '3306:3306'2
+        - '3306:3306'
     volumes:
-        - ./db-data:/var/lib/mysql
+        - ./db_data:/var/lib/mysql
     environment:
         MYSQL_USER: cisc332
         MYSQL_PASSWORD: cisc332password
