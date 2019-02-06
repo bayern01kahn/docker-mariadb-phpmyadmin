@@ -1,0 +1,29 @@
+version: '2'
+
+services:
+  phpmyadmin:
+    image: 'phpmyadmin/phpmyadmin'
+    restart: always
+    ports:
+       - '8080:80'
+    links:
+        - mysql:mysql
+    environment:
+        MYSQL_USER: cisc332
+        MYSQL_PASSWORD: cisc332password
+        MYSQL_ROOT_PASSWORD: rootpassword
+        PMA_HOST: mysql
+
+  mysql:
+    image: 'mariadb'
+    ports:
+        - '3306:3306'
+    volumes:
+      - my-datavolume:/var/lib/mysql
+    environment:
+        MYSQL_USER: cisc332
+        MYSQL_PASSWORD: cisc332password
+        MYSQL_ROOT_PASSWORD: rootpassword
+        MYSQL_DATABASE: cisc332db
+volumes:
+  my-datavolume:
