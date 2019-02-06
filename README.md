@@ -1,4 +1,4 @@
-# MySQL Docker Container Information
+# MariabDB/MySQL Docker Container Information
 
 ## Local file system for DB
 Start the container
