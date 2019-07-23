@@ -6,8 +6,8 @@ phpmyadmin:
     links:
         - mysql:mysql
     environment:
-        MYSQL_USER: cisc332
-        MYSQL_PASSWORD: cisc332password
+        MYSQL_USER: tempuser
+        MYSQL_PASSWORD: temppassword
         MYSQL_ROOT_PASSWORD: rootpassword
         PMA_HOST: mysql
 
@@ -17,8 +17,9 @@ mysql:
         - '3306:3306'
     volumes:
         - ./db_data:/var/lib/mysql
+        - ./extra_data:/extra_data
     environment:
-        MYSQL_USER: cisc332
-        MYSQL_PASSWORD: cisc332password
+        MYSQL_USER: tempuser
+        MYSQL_PASSWORD: temppassword
         MYSQL_ROOT_PASSWORD: rootpassword
-        MYSQL_DATABASE: cisc332db
+        MYSQL_DATABASE: tempdb

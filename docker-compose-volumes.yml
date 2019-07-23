@@ -9,8 +9,8 @@ services:
     links:
         - mysql:mysql
     environment:
-        MYSQL_USER: cisc332
-        MYSQL_PASSWORD: cisc332password
+        MYSQL_USER: temp
+        MYSQL_PASSWORD: temppassword
         MYSQL_ROOT_PASSWORD: rootpassword
         PMA_HOST: mysql
 
@@ -21,9 +21,9 @@ services:
     volumes:
       - my-datavolume:/var/lib/mysql
     environment:
-        MYSQL_USER: cisc332
-        MYSQL_PASSWORD: cisc332password
+        MYSQL_USER: temp
+        MYSQL_PASSWORD: temppassword
         MYSQL_ROOT_PASSWORD: rootpassword
-        MYSQL_DATABASE: cisc332db
+        MYSQL_DATABASE: tempdb
 volumes:
   my-datavolume:
