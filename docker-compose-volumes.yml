@@ -5,7 +5,7 @@ services:
     image: 'phpmyadmin/phpmyadmin'
     restart: always
     ports:
-       - '8080:80'
+       - '8180:80'
     links:
         - mysql:mysql
     environment:
